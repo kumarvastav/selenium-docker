@@ -1,0 +1,18 @@
+hub:
+  image: selenium/hub
+#firefox:
+#  image: selenium/node-firefox
+#  links:
+#    - hub
+chrome:
+  image: selenium/node-chrome
+  links:
+    - hub
+gradle:
+  image: gradle:5.2.1-jdk8
+  volumes:
+    - ./:/usr/src/gradle
+  working_dir: /usr/src/gradle
+  command: gradle test -Dselenium-hub.host=hub --scan
+  links:
+    - hub
