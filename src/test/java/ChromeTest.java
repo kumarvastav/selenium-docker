@@ -10,7 +10,7 @@ import java.net.URL;
 
 import static java.lang.Thread.sleep;
 
-public class SimpleTest extends DriverManager {
+public class ChromeTest extends DriverManager {
 
     private RemoteWebDriver driver;
 
@@ -21,7 +21,7 @@ public class SimpleTest extends DriverManager {
     }
 
     @Test
-    public void user_should_be_able_to_navigate() throws InterruptedException {
+    public void user_should_be_able_to_navigate_google() throws InterruptedException {
         driver.get("https://mail.google.com");
 
         driver.findElement(By.cssSelector("#identifierId")).sendKeys("kumar.vastav@gmail.com");
