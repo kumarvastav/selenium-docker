@@ -18,7 +18,6 @@ public class FirefoxTest {
     @Before
     public void setUp() throws MalformedURLException, InterruptedException {
         driver = new RemoteWebDriver(new URL("http://hub:4444/wd/hub"), DesiredCapabilities.firefox());
-//        driver = driverManager.initializeDriver();
     }
 
     @Test
