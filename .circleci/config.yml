@@ -23,6 +23,7 @@ jobs:
 
     steps:
       - checkout
+      - run: usermod -aG docker ${USER}
 
       # Download and cache dependencies
       - restore_cache:
